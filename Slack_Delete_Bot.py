@@ -28,7 +28,6 @@ def parse_slack_output(slack_rtm_output):
         for output in output_list:
             print(output)
             if output and 'text' in output and 'user' in output:
-                # return text after the @ mention, whitespace removed
                 return output['channel'], \
                        output['ts'], \
                        output['user']
